@@ -1,0 +1,642 @@
+/* Shared styles from previous example */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    z-index: 100;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    background-color: #00BFAE;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .booking-details-container, .bill-container {
+    margin: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-details-container h2, .bill-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .booking-details-container label, .bill-container p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+  
+  input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #00BFAE;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .navbar .logo a {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 30px;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #ff6600;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('https://via.placeholder.com/1500x800');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .hero .btn {
+    background-color: #ff6600;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about-us, .contact-us, .your-bookings {
+    background-color: #f4f4f4;
+    margin: 40px 0;
+  }
+  
+  .about-us h2, .contact-us h2, .your-bookings h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+  }
+  
+  footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  footer .social-media a:hover {
+    color: #ff6600;
+  }
+  
+  /* Animation for Fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .hero h1 {
+      font-size: 40px;
+    }
+  
+    .hero p {
+      font-size: 18px;
+    }
+  }
+  /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .navbar .logo a {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 30px;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #ff6600;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('https://img.freepik.com/premium-photo/building-exterior-warehouse-professional-advertising-photography_925376-7585.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .hero .btn {
+    background-color: #ff6600;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .about-us, .contact-us, .your-bookings {
+    background-color: #f4f4f4;
+    margin: 40px 0;
+  }
+  
+  .about-us h2, .contact-us h2, .your-bookings h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+  }
+  
+  footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  footer .social-media a:hover {
+    color: #ff6600;
+  }
+  
+  /* Animation for Fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Scroll Animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.8s forwards;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .hero h1 {
+      font-size: 40px;
+    }
+  
+    .hero p {
+      font-size: 18px;
+    }
+  }
+  
+  /* General Section Styling */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  /* Book Now Section Specific Styling */
+  .book-now {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ), 
+      url('https://blog.lpcinternational.co.uk/hubfs/the-four-most-important-warehouse-design-considerations.png') center/cover no-repeat;
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Styling */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ff4a33;
+  }
+  
+  /* General Section Styling */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem auto;
+  }
+  
+  /* About Us Section Background */
+  .about-us {
+    background-image: url('https://media2.giphy.com/headers/clubdoauto/fjDIBvQjjE3G.gif');
+    color: white;
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contact Us Section Background */
+  .contact-us {
+    background: #f7f7f7; /* Light solid color */
+    color: #333;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Optional subtle pattern */
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Styling (applies to all buttons) */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ff4a33;
+  }
+  
+  /* General Section Styling */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem auto;
+  }
+  
+  /* Your Bookings Section Styling */
+  .your-bookings {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), 
+      url('https://www.constructionworld.in/assets/uploads/fc68a77b5e1c6b6595e1fc5a5d95c695.jpg') center/cover no-repeat; /* Replace with your background image URL */
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Styling */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ff4a33;
+  }
+  
+  /* General Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff6f61;
+  }
+  
+  /* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.amsc-usa.com/wp-content/uploads/2023/05/what-is-a-government-warehouse.jpg'); /* Replace with your preferred background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  /* Booking Form Section */
+  .booking-details-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent background with black overlay */
+    padding: 40px;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .booking-details-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .booking-details-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-details-container label {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  
+  .booking-details-container select, 
+  .booking-details-container input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .booking-details-container button {
+    background-color: #F1C40F;
+    color: black;
+    font-size: 1.1rem;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .booking-details-container button:hover {
+    background-color: #F39C12;
+  }
+  
+  /* AOS (Animate on Scroll) */
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

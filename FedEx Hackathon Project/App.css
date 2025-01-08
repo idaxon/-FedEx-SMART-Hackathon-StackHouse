@@ -1,0 +1,42 @@
+.App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  input {
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .warehouse-card {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  .warehouse-card:hover {
+    background-color: #ddd;
+  }
+  
+  .booking-container {
+    margin-top: 20px;
+  }
+  
+  .booking-success {
+    margin-top: 20px;
+    color: green;
+  }
+  

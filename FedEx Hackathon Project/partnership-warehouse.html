@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partnership Warehouse</title>
+  <link rel="stylesheet" href="style.css"> <!-- Make sure the stylesheet is linked properly -->
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style>
+    /* Background Image for the entire page */
+    body {
+      background-image: url('https://okcredit-blog-images-prod.storage.googleapis.com/2021/11/agriculturalwarehouse1.jpg'); /* Replace with actual image URL */
+      background-size: cover;
+      background-position: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      color: white;
+    }
+
+    .navbar .logo a {
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .navbar .nav-links li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Warehouse List Section */
+    .warehouse-list-section {
+      padding: 40px;
+     
+      border-radius: 10px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .sorting-options {
+      margin-bottom: 20px;
+    }
+
+    .sorting-options select {
+      padding: 5px;
+      margin: 5px;
+    }
+
+    .warehouse-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+      color: black;
+      align-items: center;
+    }
+
+    .warehouse {
+     
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .warehouse:hover {
+      transform: translateY(-5px);
+    }
+
+    .warehouse h3 {
+      margin-bottom: 10px;
+    }
+
+    .warehouse p {
+      margin: 5px 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+
+    /* Add Your Warehouse Section */
+    .add-your-warehouse {
+      background: #ff6f61;
+      padding: 40px;
+      color: white;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    .add-your-warehouse h3 {
+      margin-bottom: 20px;
+    }
+
+    .add-your-warehouse input,
+    .add-your-warehouse textarea {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .add-your-warehouse button {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #ff6f61;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="logo">
+    <a href="#">StackHouse</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Book Now</a></li>
+    <li><a href="index.html">About Us</a></li>
+    <li><a href="index.html">Contact</a></li>
+    <li><a href="your-bookings.html">Your Bookings</a></li>
+    <li><a href="partnership-warehouse.html">Partnership Warehouse</a></li>
+  </ul>
+</nav>
+
+<!-- Warehouse List Section -->
+<section class="warehouse-list-section" data-aos="fade-up">
+  <h2>Partnership Warehouses</h2>
+
+  <!-- Sorting Options -->
+  <div class="sorting-options">
+    <label for="price-sort">Sort by Price:</label>
+    <select id="price-sort" name="price-sort">
+      <option value="low-to-high">Low to High</option>
+      <option value="high-to-low">High to Low</option>
+    </select>
+
+    <label for="location-sort">Sort by Location:</label>
+    <select id="location-sort" name="location-sort">
+      <option value="ascending">A-Z</option>
+      <option value="descending">Z-A</option>
+    </select>
+  </div>
+
+  <!-- Warehouse Listings -->
+  <div class="warehouse-list">
+    <!-- Example Warehouse Listings (Repeat this for 100 warehouses) -->
+    <div class="warehouse" data-aos="zoom-in">
+      <h3>Warehouse 1</h3>
+      <p><strong>Location:</strong> Mumbai, Andheri</p>
+      <p><strong>Price per day:</strong> ₹5000</p>
+    </div>
+
+    <div class="warehouse" data-aos="zoom-in">
+      <h3>Warehouse 2</h3>
+      <p><strong>Location:</strong> Pune, Hinjewadi</p>
+      <p><strong>Price per day:</strong> ₹4000</p>
+    </div>
+
+    <div class="warehouse" data-aos="zoom-in">
+      <h3>Warehouse 3</h3>
+      <p><strong>Location:</strong> Bangalore, Koramangala</p>
+      <p><strong>Price per day:</strong> ₹6000</p>
+    </div>
+
+
+    <div class="warehouse" data-aos="zoom-in">
+        <h3>Warehouse 4</h3>
+        <p><strong>Location:</strong> Bangalore, New City</p>
+        <p><strong>Price per day:</strong> ₹6500</p>
+      </div>
+
+    <!-- Repeat similar blocks for approximately 100 warehouses -->
+    <!-- Add warehouse blocks here -->
+  </div>
+</section>
+
+<!-- Add Your Warehouse Section -->
+<section class="add-your-warehouse" data-aos="fade-up">
+  <h3>Add Your Warehouse</h3>
+  <p>Fill in the details to list your warehouse with StackHouse!</p>
+  <form>
+    <input type="text" placeholder="Warehouse Name" required>
+    <input type="text" placeholder="Location" required>
+    <input type="number" placeholder="Price per day" required>
+    <textarea placeholder="Description" required></textarea>
+    <button type="submit">Submit Warehouse</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 StackHouse. All Rights Reserved.</p>
+</footer>
+
+<!-- AOS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    offset: 200,    // Offset from the top of the screen
+    once: true      // Animation occurs only once
+  });
+
+  // Add sorting functionality in JavaScript
+  document.getElementById('price-sort').addEventListener('change', function() {
+    // Handle sorting by price
+    alert("Sort by Price: " + this.value);
+  });
+
+  document.getElementById('location-sort').addEventListener('change', function() {
+    // Handle sorting by location
+    alert("Sort by Location: " + this.value);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StackHouse - Warehouse Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+<!-- Navbar (Sticky) -->
+<nav class="navbar" id="navbar">
+    <div class="logo">
+      <a href="#">StackHouse</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#contact-us">Contact</a></li>
+      <li><a href="#your-bookings">Your Bookings</a></li>
+      <li><a href="partnership-warehouse.html">Partnership Warehouse</a></li> <!-- New link -->
+    </ul>
+  </nav>
+  
+
+<<!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero" data-aos="fade-up">
+    <div class="hero-content" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+      <h1 style="color: white;">Welcome to StackHouse</h1>
+      <p style="color: white;">Rent and Book Warehouses for Your Business</p>
+      <a href="#book-now" class="btn" data-aos="zoom-in" data-aos-delay="100" style="background-color: #ff6f61; color: white;">Book a Warehouse</a>
+      <a href="#about-us" class="btn" data-aos="zoom-in" data-aos-delay="200" style="background-color: #ff6f61; color: white;">Learn More</a>
+    </div>
+  </section>
+  
+  
+
+<!-- Book Now Section -->
+<section id="book-now" class="section book-now" data-aos="fade-up">
+    <h2>Book a Warehouse</h2>
+    <p>Choose a state, city, locality, and book a warehouse for your goods</p><br>
+    <a href="booking.html" class="btn" data-aos="zoom-in">Start Booking</a>
+  </section>
+  
+<!-- About Us Section -->
+<section id="about-us" class="section about-us" data-aos="fade-left">
+    <h2>About Us</h2>
+    <p style="text-align: left;">
+      At StackHouse, we’re redefining logistics by making warehouse booking seamless and efficient. Whether you need short-term storage or long-term solutions, we’ve got you covered across the country.
+    </p>
+    <p style="text-align: left;">
+      Founded by Daksh Mishra, a second-year student from BML Munjal University, StackHouse was born out of a simple idea: to make logistics as easy as ordering pizza (but without pineapple debates). With innovation and a touch of humor, we’re here to simplify your logistics journey.
+    </p>
+    <p style="text-align: left;">
+      Join us in revolutionizing the way businesses store and move their goods—because logistics should be smart, simple, and maybe even fun!
+    </p>
+  </section>
+  
+  
+  
+  <!-- Contact Us Section -->
+  <section id="contact-us" class="section contact-us" data-aos="fade-right">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need support, reach out to us!</p><br>
+    <a href="mailto:support@stackhouse.com" class="btn" data-aos="zoom-in">Email Us</a>
+  </section>
+  
+<!-- Your Bookings Section -->
+<section id="your-bookings" class="section your-bookings" data-aos="fade-up">
+    <h2>Your Bookings</h2>
+    <p>View your previous bookings and manage your warehouses.</p><br>
+    <a href="your-bookings.html" class="btn" data-aos="zoom-in">View Bookings</a>
+  </section>
+  
+
+<!-- Footer Section -->
+<footer data-aos="fade-up">
+  <div class="footer-content">
+    <p>&copy; 2025 StackHouse. All Rights Reserved.</p>
+    <div class="social-media">
+      <a href="#" data-aos="fade-left" data-aos-delay="100">Facebook</a>
+      <a href="#" data-aos="fade-left" data-aos-delay="200">Twitter</a>
+      <a href="#" data-aos="fade-left" data-aos-delay="300">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<!-- AOS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    offset: 200,    // Offset from the top of the screen
+    once: true      // Animation occurs only once
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bookings</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://chowgulebrothers.com/wp-content/uploads/2015/11/Warehouse-location-exterior-view.png'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .your-bookings-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 900px;
+      margin: 50px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .booking-list {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #f1c40f;
+      padding-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .booking-list p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: #F1C40F;
+      color: black;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #F39C12;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Your Bookings -->
+<section class="your-bookings-container" data-aos="fade-up" data-aos-duration="1000">
+  <h2>Your Bookings</h2>
+
+  <!-- Booking #1 -->
+  <div class="booking-list" data-aos="fade-up" data-aos-delay="200">
+    <p><strong>Booking #1</strong></p>
+    <p><strong>State:</strong> <span id="booking-1-state" class="highlight"></span></p>
+    <p><strong>City:</strong> <span id="booking-1-city" class="highlight"></span></p>
+    <p><strong>Locality:</strong> <span id="booking-1-locality" class="highlight"></span></p>
+    <p><strong>Warehouse Address:</strong> <span id="booking-1-address" class="highlight"></span></p>
+    <p><strong>From Date:</strong> <span id="booking-1-from-date" class="highlight"></span></p>
+    <p><strong>To Date:</strong> <span id="booking-1-to-date" class="highlight"></span></p>
+    <p><strong>Total Amount:</strong> ₹<span id="booking-1-amount" class="highlight"></span></p>
+  </div>
+
+  <!-- Booking #2 -->
+  <div class="booking-list" data-aos="fade-up" data-aos-delay="400">
+    <p><strong>Booking #2</strong></p>
+    <p><strong>State:</strong> <span id="booking-2-state" class="highlight"></span></p>
+    <p><strong>City:</strong> <span id="booking-2-city" class="highlight"></span></p>
+    <p><strong>Locality:</strong> <span id="booking-2-locality" class="highlight"></span></p>
+    <p><strong>Warehouse Address:</strong> <span id="booking-2-address" class="highlight"></span></p>
+    <p><strong>From Date:</strong> <span id="booking-2-from-date" class="highlight"></span></p>
+    <p><strong>To Date:</strong> <span id="booking-2-to-date" class="highlight"></span></p>
+    <p><strong>Total Amount:</strong> ₹<span id="booking-2-amount" class="highlight"></span></p>
+  </div>
+
+  <!-- Booking #3 -->
+  <div class="booking-list" data-aos="fade-up" data-aos-delay="600">
+    <p><strong>Booking #3</strong></p>
+    <p><strong>State:</strong> <span id="booking-3-state" class="highlight"></span></p>
+    <p><strong>City:</strong> <span id="booking-3-city" class="highlight"></span></p>
+    <p><strong>Locality:</strong> <span id="booking-3-locality" class="highlight"></span></p>
+    <p><strong>Warehouse Address:</strong> <span id="booking-3-address" class="highlight"></span></p>
+    <p><strong>From Date:</strong> <span id="booking-3-from-date" class="highlight"></span></p>
+    <p><strong>To Date:</strong> <span id="booking-3-to-date" class="highlight"></span></p>
+    <p><strong>Total Amount:</strong> ₹<span id="booking-3-amount" class="highlight"></span></p>
+  </div>
+
+  <!-- Button to go back to home page -->
+  <a href="index.html" class="btn" data-aos="zoom-in" data-aos-delay="800">Go to Home</a>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init();
+
+  // Sample data for bookings, can be dynamically retrieved from localStorage
+  const bookings = [
+    { bookingId: 1, state: 'Maharashtra', city: 'Mumbai', locality: 'Andheri', address: 'ABC Warehouse, Andheri', fromDate: '2025-01-10', toDate: '2025-01-15', totalAmount: 25000 },
+    { bookingId: 2, state: 'Delhi', city: 'NewDelhi', locality: 'Connaught Place', address: 'XYZ Warehouse, Connaught Place', fromDate: '2025-02-01', toDate: '2025-02-07', totalAmount: 35000 },
+    { bookingId: 3, state: 'Karnataka', city: 'Bangalore', locality: 'Koramangala', address: 'LMN Warehouse, Koramangala', fromDate: '2025-03-05', toDate: '2025-03-10', totalAmount: 40000 }
+  ];
+
+  // Loop through each booking and populate the details
+  bookings.forEach(booking => {
+    document.getElementById(`booking-${booking.bookingId}-state`).textContent = booking.state;
+    document.getElementById(`booking-${booking.bookingId}-city`).textContent = booking.city;
+    document.getElementById(`booking-${booking.bookingId}-locality`).textContent = booking.locality;
+    document.getElementById(`booking-${booking.bookingId}-address`).textContent = booking.address;
+    document.getElementById(`booking-${booking.bookingId}-from-date`).textContent = booking.fromDate;
+    document.getElementById(`booking-${booking.bookingId}-to-date`).textContent = booking.toDate;
+    document.getElementById(`booking-${booking.bookingId}-amount`).textContent = booking.totalAmount;
+  });
+</script>
+
+</body>
+</html>

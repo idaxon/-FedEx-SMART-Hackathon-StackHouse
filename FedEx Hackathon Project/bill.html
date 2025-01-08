@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://t4.ftcdn.net/jpg/06/27/22/61/360_F_627226169_jHToW8OxFL2ShT1iNgJnhNUMrJbAafDY.jpg'); /* Replace with your desired background image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bill-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .bill-container p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .bill-container h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .btn {
+      background-color: #F1C40F;
+      color: black;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #F39C12;
+    }
+
+    .bill-container .highlight {
+      font-weight: bold;
+    }
+
+    .bill-container a {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    .bill-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Bill Summary -->
+<section class="bill-container" data-aos="fade-up" data-aos-duration="1000">
+  <h2>Booking Summary</h2>
+
+  <p><strong>State:</strong> <span id="bill-state" class="highlight"></span></p>
+  <p><strong>City:</strong> <span id="bill-city" class="highlight"></span></p>
+  <p><strong>Locality:</strong> <span id="bill-locality" class="highlight"></span></p>
+  <p><strong>Warehouse Address:</strong> <span id="bill-address" class="highlight"></span></p>
+  <p><strong>From Date:</strong> <span id="bill-from-date" class="highlight"></span></p>
+  <p><strong>To Date:</strong> <span id="bill-to-date" class="highlight"></span></p>
+
+  <h3>Bill Details:</h3>
+  <p><strong>Price per Day:</strong> ₹5000</p>
+  <p><strong>Total Days:</strong> <span id="bill-total-days" class="highlight"></span></p>
+  <p><strong>Total Amount:</strong> ₹<span id="bill-total-amount" class="highlight"></span></p>
+
+  <h3>Payment Method:</h3>
+  <p>Pay using Credit Card or UPI</p>
+
+  <button class="btn" data-aos="zoom-in" data-aos-delay="300">Pay Now</button>
+
+  <h3>Your Booking Number:</h3>
+  <p><strong>Booking #12345</strong></p>
+
+  <p>Tell this booking number to the warehouse staff to complete your booking.</p>
+
+  <a href="your-bookings.html" class="btn" data-aos="zoom-in" data-aos-delay="400">View Your Booking</a>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init();
+
+  // Populate the bill page with booking details from localStorage
+  document.getElementById('bill-state').textContent = localStorage.getItem('state');
+  document.getElementById('bill-city').textContent = localStorage.getItem('city');
+  document.getElementById('bill-locality').textContent = localStorage.getItem('locality');
+  document.getElementById('bill-address').textContent = localStorage.getItem('address');
+  document.getElementById('bill-from-date').textContent = localStorage.getItem('from_date');
+  document.getElementById('bill-to-date').textContent = localStorage.getItem('to_date');
+  document.getElementById('bill-total-days').textContent = localStorage.getItem('total_days');
+  document.getElementById('bill-total-amount').textContent = localStorage.getItem('total_amount');
+</script>
+
+</body>
+</html>
